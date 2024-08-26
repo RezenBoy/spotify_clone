@@ -8,9 +8,19 @@ class GenderInput extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CommonAppBar(title: "Create account"),
+      backgroundColor: Colors.black,
       body: Column(
         children: [
-
+          Text(
+            "What's your gender?",
+            style: TextStyle(
+                fontSize: 20,
+                color: Colors.white,
+                fontWeight: FontWeight.bold),
+          ),
+          SizedBox(
+            height: 5,
+          ),
         ],
       ),
     );

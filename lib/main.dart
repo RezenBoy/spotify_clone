@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:spotify_clone/screens/new_account/presentation/email_input.dart';
+import 'package:spotify_clone/screens/new_account/presentation/gender_input.dart';
 import 'package:spotify_clone/screens/new_account/presentation/password_input.dart';
 
 void main() {
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       // home: LoginScreen(),
       // home: EmailInput(),
-      home: PasswordInput(),
+      // home: PasswordInput(),
+      home : GenderInput(),
     );
   }
 }
