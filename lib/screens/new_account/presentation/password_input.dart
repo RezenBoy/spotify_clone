@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/shared/create_account/common_appbar.dart';
 
+import '../../../shared/app_text_style.dart';
 import '../../../shared/create_account/common_button.dart';
 import '../../../shared/create_account/common_text_field.dart';
 
@@ -19,10 +20,7 @@ class PasswordInput extends StatelessWidget {
             children: [
               Text(
                 "Create a password",
-                style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold),
+                style: getTextStyle(AppTextStyle.heading2),
               ),
               SizedBox(
                 height: 5,
@@ -33,7 +31,7 @@ class PasswordInput extends StatelessWidget {
               ),
               Text(
                 "use atleast 8 characters.",
-                style: TextStyle(color: Colors.white, fontSize: 12),
+                style: getTextStyle(AppTextStyle.subheading1),
               ),
               SizedBox(
                 height: 50,

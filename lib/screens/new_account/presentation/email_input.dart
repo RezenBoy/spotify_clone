@@ -3,6 +3,8 @@ import 'package:spotify_clone/shared/create_account/common_appbar.dart';
 import 'package:spotify_clone/shared/create_account/common_button.dart';
 import 'package:spotify_clone/shared/create_account/common_text_field.dart';
 
+import '../../../shared/app_text_style.dart';
+
 class EmailInput extends StatelessWidget {
   const EmailInput({super.key});
 
@@ -18,10 +20,7 @@ class EmailInput extends StatelessWidget {
           children: [
             Text(
               "What's your email?",
-              style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold),
+              style: getTextStyle(AppTextStyle.heading2),
             ),
             SizedBox(
               height: 5,
@@ -32,7 +31,7 @@ class EmailInput extends StatelessWidget {
             ),
             Text(
               "You'll need to confirm this email later.",
-              style: TextStyle(color: Colors.white, fontSize: 12),
+              style: getTextStyle(AppTextStyle.subheading1),
             ),
             SizedBox(
               height: 50,

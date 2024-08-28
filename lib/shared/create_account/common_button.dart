@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 class CommonButton extends StatelessWidget {
-  const CommonButton({super.key});
+  String buttonText;
+  Color buttonColor;
+  Color textColor;
+  CommonButton({super.key,this.buttonText = "Next",this.buttonColor = Colors.grey,this.textColor = Colors.white});
 
   @override
   Widget build(BuildContext context) {
@@ -9,15 +12,15 @@ class CommonButton extends StatelessWidget {
       child: TextButton(
           onPressed: () {},
           style: TextButton.styleFrom(
-            backgroundColor: Colors.grey,
+            backgroundColor: buttonColor,
             padding: EdgeInsets.symmetric(
               horizontal: 20,
             ),
           ),
           child: Text(
-            "Next",
+            buttonText,
             style: TextStyle(
-                color: Colors.white,
+                color: textColor,
                 fontWeight: FontWeight.bold,
                 fontSize: 18),
           )),

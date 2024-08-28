@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:spotify_clone/shared/app_text_style.dart';
 
 class AppLoginButton extends StatelessWidget {
   final String buttonName;
   Color buttonColor;
   Color textColor;
   bool isBorder;
-  String svgName;
+  String svgPath;
 
   AppLoginButton(
       {super.key,
@@ -14,7 +15,7 @@ class AppLoginButton extends StatelessWidget {
       this.buttonColor = Colors.black,
       this.textColor = Colors.white,
       this.isBorder = false,
-      required this.svgName});
+      this.svgPath = ""});
 
   @override
   Widget build(BuildContext context) {
@@ -30,11 +31,13 @@ class AppLoginButton extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          SvgPicture.asset("assets/svg/$svgName", height: 22),
+          SizedBox(
+              child: svgPath == ""
+                  ? SizedBox()
+                  : SvgPicture.asset(svgPath, height: 22)),
           Text(
             buttonName,
-            style: TextStyle(
-                color: textColor, fontWeight: FontWeight.w900, fontSize: 14),
+            style: getTextStyle(AppTextStyle.primaryText,color: textColor),
             textAlign: TextAlign.center,
           ),
           SizedBox(),

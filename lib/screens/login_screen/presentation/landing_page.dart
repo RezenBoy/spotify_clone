@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:spotify_clone/shared/app_image.dart';
 import 'package:spotify_clone/shared/app_login_button.dart';
+import 'package:spotify_clone/shared/app_text_style.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class LandingPage extends StatelessWidget {
+  const LandingPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +31,7 @@ class LoginScreen extends StatelessWidget {
                 height: 200,
               ),
               SvgPicture.asset(
-                "assets/svg/spotify_icon.svg",
+                getSvgImagePath(AppSvgImages.appleIcon),
                 color: Colors.white,
                 height: 70,
               ),
@@ -37,30 +39,29 @@ class LoginScreen extends StatelessWidget {
                 height: 100,
               ),
               Text("Millions of Songs.\nFree on Spotify.",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w900,
-                    fontSize: 35,
-                  ),
+                  style: getTextStyle(AppTextStyle.heading1),
                   textAlign: TextAlign.center),
               SizedBox(
                 height: 50,
               ),
               AppLoginButton(
-                  buttonName: "Sign up free",
-                  buttonColor: Colors.green,
-                  textColor: Colors.black,
-                  isBorder: true,
-                  svgName: ""),
+                buttonName: "Sign up free",
+                buttonColor: Colors.green,
+                textColor: Colors.black,
+                isBorder: true,
+              ),
               AppLoginButton(
                   buttonName: "Continue with Google",
-                  svgName: "google_icon.svg"),
+                  svgPath: getSvgImagePath(AppSvgImages.googleIcon)),
               AppLoginButton(
                   buttonName: "Continue with Facebook",
-                  svgName: "facebook_icon.svg"),
+                  svgPath: getSvgImagePath(AppSvgImages.facebookIcon)),
               AppLoginButton(
-                  buttonName: "Continue with Apple", svgName: "apple_icon.svg"),
-              SizedBox(height: 12 ,),
+                  buttonName: "Continue with Apple",
+                  svgPath: getSvgImagePath(AppSvgImages.appleIcon)),
+              SizedBox(
+                height: 12,
+              ),
               Text(
                 "Log in",
                 style: TextStyle(
