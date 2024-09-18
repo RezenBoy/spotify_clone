@@ -31,7 +31,7 @@ class LandingPage extends StatelessWidget {
                 height: 200,
               ),
               SvgPicture.asset(
-                getSvgImagePath(AppSvgImages.appleIcon),
+                getSvgImagePath(AppSvgImages.appLogo),
                 color: Colors.white,
                 height: 70,
               ),

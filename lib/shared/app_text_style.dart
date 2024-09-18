@@ -4,6 +4,7 @@ enum AppTextStyle {
   heading1,
   heading2,
   primaryText,
+  subPrimaryText,
   bodyText,
   subheading1,
 }
@@ -28,6 +29,11 @@ TextStyle getTextStyle(
           color: color ?? Colors.white,
           fontWeight: fontWeight ?? FontWeight.w900,
           fontSize: 14);
+    case AppTextStyle.subPrimaryText:
+      return TextStyle(
+          color: color ?? Colors.white,
+          fontWeight: fontWeight ?? FontWeight.w900,
+          fontSize: 12);
     case AppTextStyle.bodyText:
       return TextStyle(
         fontSize: 16,

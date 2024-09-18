@@ -3,6 +3,7 @@ enum AppSvgImages {
   appleIcon,
   facebookIcon,
   googleIcon,
+  userIcon,
 }
 
 enum AppPngImages {
@@ -20,6 +21,8 @@ String getSvgImagePath(AppSvgImages svgImage) {
       return 'assets/svg/facebook_icon.svg';
     case AppSvgImages.googleIcon:
       return 'assets/svg/google_icon.svg';
+      case AppSvgImages.userIcon:
+    return 'assets/svg/user_icon.svg';
     default:
       return '';
   }
